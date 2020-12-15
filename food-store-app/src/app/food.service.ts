@@ -15,7 +15,7 @@ export class FoodService {
 
     getAll() {
       this.http
-        .get('http://localhost:5000/fruits')
+        .get('https://food-store-app-nodejs-be.herokuapp.com/fruits')
         .subscribe((products: Array<ProductComponent>) => {
           this.ngRedux.dispatch(LoadItems(products));
         });
